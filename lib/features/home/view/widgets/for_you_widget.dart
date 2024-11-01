@@ -9,12 +9,14 @@ class ForYouWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         itemCount: 20,
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 270.w,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, // Number of columns (2 in this case)
+          childAspectRatio: 1, // Aspect ratio of each item
           crossAxisSpacing: 10.w,
           mainAxisSpacing: 10.h,
-          childAspectRatio: 1,
         ),
         itemBuilder: (context, index) => CustomContainer(
           color: Colors.purple.shade100,

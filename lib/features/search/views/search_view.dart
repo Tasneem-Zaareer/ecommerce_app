@@ -5,6 +5,7 @@ import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/features/home/view/widgets/search_bar_widget.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
+import 'package:ecommerce_app/features/search/views/widgets/search_header_widget.dart';
 import 'package:ecommerce_app/features/search/views/widgets/search_results_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +17,7 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -25,7 +27,7 @@ class SearchView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Logo(),
-              HomeHeaderWidget(),
+              SearchHeaderWidget(),
               SearchBarWidget(),
               TitleWidget(
                 title: 'PopularTags',

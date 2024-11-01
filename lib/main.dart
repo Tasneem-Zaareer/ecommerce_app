@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:ecommerce_app/features/home/view/home.dart';
 import 'package:ecommerce_app/features/search/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           //localization initialize
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
@@ -41,9 +43,9 @@ class MyApp extends StatelessWidget {
           // // darkTheme: darkMode,
           // // themeMode: themeMode,
           // // theme: lightMode,
-          debugShowCheckedModeBanner: false,
-          // home: const HomeView(),
-          home: SearchView(),
+
+          home: const HomeView(),
+          // home: SearchView(),
         );
       },
     );

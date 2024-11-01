@@ -7,11 +7,13 @@ class TitleWidget extends StatelessWidget {
   final String title;
   final String? subtitle;
   final double? titleSize;
+  final FontWeight? subtitleFontweight;
   const TitleWidget({
     super.key,
     required this.title,
     this.subtitle,
     this.titleSize,
+    this.subtitleFontweight,
   });
 
   @override
@@ -29,6 +31,7 @@ class TitleWidget extends StatelessWidget {
           CustomText(
             text: tr(subtitle ?? ''),
             fontSize: titleSize ?? 12.sp,
+            fontWeight: subtitleFontweight ?? FontWeight.w600,
           ),
         ],
       ),

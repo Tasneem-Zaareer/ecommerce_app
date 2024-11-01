@@ -1,5 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
+import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,26 +10,12 @@ class HomeHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
-      width: MediaQuery.of(context).size.width * 0.5,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomText(
-            text: tr('findYour'),
-            fontSize: 28.sp,
-          ),
-          CustomText(
-            text: tr('bestPresent'),
-            fontSize: 28.sp,
-          ),
-        ],
+      height: 120.h,
+      color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+      child: Image.asset(
+        AppImages.homeHeaderImage,
+        fit: BoxFit.cover,
       ),
     );
-
-    // !!!! first header
-    // return CustomContainer(
-    //   height: 100.h,
-    //   color: Colors.purple.shade100,
-    // );
   }
 }
