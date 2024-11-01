@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
-import 'package:ecommerce_app/features/home/view/widgets/for_you_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/features/home/view/widgets/search_bar_widget.dart';

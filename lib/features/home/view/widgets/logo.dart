@@ -8,9 +8,12 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomText(
-      text: 'LOGO',
-      color: Colors.grey,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CustomText(
+        text: 'L O G O',
+        color: Colors.grey,
+      ),
     );
   }
 }
