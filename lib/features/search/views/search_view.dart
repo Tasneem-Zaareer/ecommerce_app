@@ -17,6 +17,7 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
@@ -26,7 +27,6 @@ class SearchView extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Logo(),
               SearchHeaderWidget(),
               SearchBarWidget(),
               TitleWidget(
