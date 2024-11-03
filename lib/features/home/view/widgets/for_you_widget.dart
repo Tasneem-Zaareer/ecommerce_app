@@ -2,6 +2,8 @@ import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/constants/image_path.dart';
+
 class ForYouWidget extends StatelessWidget {
   const ForYouWidget({super.key});
 
@@ -20,8 +22,18 @@ class ForYouWidget extends StatelessWidget {
           mainAxisSpacing: 10.h,
         ),
         itemBuilder: (context, index) => CustomContainer(
-          color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+            borderRadius: BorderRadius.circular(10.r),
+          ),
           height: 100.h,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10.r),
+            child: Image.asset(
+              AppImages.categoryTestImage3,
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
       ),
     );

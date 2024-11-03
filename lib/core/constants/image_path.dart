@@ -7,6 +7,7 @@ class AppImages {
   static const String homeHeaderImage = 'assets/images/home_header.jpg';
     static const String categoryTestImage = 'assets/images/category_test.jpg';
         static const String categoryTestImage2 = 'assets/images/category_test2.jpg';
+        static const String categoryTestImage3 = 'assets/images/category_test3.jpg';
 
 
 
