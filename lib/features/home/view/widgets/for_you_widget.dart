@@ -7,7 +7,8 @@ class ForYouWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
+      height: 200.h,
       child: GridView.builder(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -19,7 +20,7 @@ class ForYouWidget extends StatelessWidget {
           mainAxisSpacing: 10.h,
         ),
         itemBuilder: (context, index) => CustomContainer(
-          color: Colors.purple.shade100,
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
           height: 100.h,
         ),
       ),

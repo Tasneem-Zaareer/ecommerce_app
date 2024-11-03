@@ -3,6 +3,7 @@ import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/categories/view/categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
+import 'package:ecommerce_app/features/home/view/widgets/for_you_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/features/home/view/widgets/search_bar_widget.dart';
@@ -23,7 +24,7 @@ class HomeView extends StatelessWidget {
           children: [
             const Logo(),
             const HomeHeaderWidget(),
-            const SearchBarWidget(),
+            // const SearchBarWidget(),
             TitleSection(
               title: tr('shopByCategory'),
               subtitle: tr('seeAll'),
@@ -37,7 +38,7 @@ class HomeView extends StatelessWidget {
             ),
             const HomeCategoriesWidget(),
             TitleSection(title: tr('forYou')),
-            // const ForYouWidget(),
+            const ForYouWidget(),
             TitleSection(title: tr('mostPopular'), subtitle: tr('seeAll')),
             CustomCategoryList(),
             TitleSection(title: tr('trendy'), subtitle: tr('seeAll')),
