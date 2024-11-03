@@ -8,12 +8,14 @@ class TitleWidget extends StatelessWidget {
   final String? subtitle;
   final double? titleSize;
   final FontWeight? subtitleFontweight;
+  final Function()? onTap;
   const TitleWidget({
     super.key,
     required this.title,
     this.subtitle,
     this.titleSize,
     this.subtitleFontweight,
+    this.onTap,
   });
 
   @override
@@ -28,10 +30,13 @@ class TitleWidget extends StatelessWidget {
             fontSize: 14.sp,
             fontWeight: FontWeight.w600,
           ),
-          CustomText(
-            text: tr(subtitle ?? ''),
-            fontSize: titleSize ?? 12.sp,
-            fontWeight: subtitleFontweight ?? FontWeight.w600,
+          GestureDetector(
+            onTap: onTap,
+            child: CustomText(
+              text: tr(subtitle ?? ''),
+              fontSize: titleSize ?? 12.sp,
+              fontWeight: subtitleFontweight ?? FontWeight.w600,
+            ),
           ),
         ],
       ),

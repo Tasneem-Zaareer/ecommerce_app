@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
+import 'package:ecommerce_app/features/categories/view/categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
@@ -23,7 +24,17 @@ class HomeView extends StatelessWidget {
             const Logo(),
             const HomeHeaderWidget(),
             const SearchBarWidget(),
-            TitleSection(title: tr('shopByCategory'), subtitle: tr('seeAll')),
+            TitleSection(
+              title: tr('shopByCategory'),
+              subtitle: tr('seeAll'),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => CategoriesView(),
+                  ),
+                );
+              },
+            ),
             const HomeCategoriesWidget(),
             TitleSection(title: tr('forYou')),
             // const ForYouWidget(),
@@ -41,11 +52,13 @@ class HomeView extends StatelessWidget {
 class TitleSection extends StatelessWidget {
   final String title;
   final String? subtitle;
+  final Function()? onTap;
 
   const TitleSection({
     super.key,
     required this.title,
     this.subtitle,
+    this.onTap,
   });
 
   @override
@@ -58,6 +71,7 @@ class TitleSection extends StatelessWidget {
           title: title,
           subtitle: subtitle,
           subtitleFontweight: FontWeight.w400,
+          onTap: onTap,
         ),
       ),
     );
