@@ -11,7 +11,7 @@ import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'widgets/categories_widget.dart';
+import 'widgets/home_categories_list.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
