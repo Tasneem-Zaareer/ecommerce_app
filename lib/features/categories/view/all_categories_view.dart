@@ -1,8 +1,8 @@
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class CategoriesView extends StatelessWidget {
-  const CategoriesView({super.key});
+class AllCategoriesView extends StatelessWidget {
+  const AllCategoriesView({super.key});
 
   @override
   Widget build(BuildContext context) {

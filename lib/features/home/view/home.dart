@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
-import 'package:ecommerce_app/features/categories/view/categories_view.dart';
+import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/for_you_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
@@ -31,12 +31,12 @@ class HomeView extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => CategoriesView(),
+                    builder: (context) => AllCategoriesView(),
                   ),
                 );
               },
             ),
-            const HomeCategoriesWidget(),
+            const HomeCategoriesList(),
             TitleSection(title: tr('forYou')),
             const ForYouWidget(),
             TitleSection(title: tr('mostPopular'), subtitle: tr('seeAll')),
