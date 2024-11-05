@@ -24,7 +24,7 @@ class CategoryViewProducts extends StatelessWidget {
             crossAxisSpacing: 10,
             childAspectRatio: 1,
             mainAxisExtent: 100.h,
-            crossAxisCount: 3,
+            crossAxisCount: 2,
           ),
           itemBuilder: (context, index) => Column(
             children: [

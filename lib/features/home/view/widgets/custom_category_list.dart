@@ -32,7 +32,7 @@ class CustomCategoryList extends StatelessWidget {
                         productName: 'productName',
                         productDescription: 'productDescription',
                         productPrice: '20\$',
-                        productLink: 'ttps://amzn.to/4fBCFix',
+                        productLink: 'https://amzn.to/4fBCFix',
                       ),
                     ),
                   ),

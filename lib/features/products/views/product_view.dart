@@ -4,6 +4,7 @@ import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProductView extends StatelessWidget {
   final String productImage;
@@ -46,43 +47,41 @@ class ProductView extends StatelessWidget {
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
                       padding: EdgeInsets.all(10.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               CustomText(
                                 text: tr(productName),
                                 color: Colors.black,
                               ),
+                              CustomText(
+                                text: tr(productDescription),
+                                color: Colors.grey.shade700,
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w300,
+                              ),
+                              CustomText(
+                                text: tr(productPrice),
+                                color: Colors.grey.shade700,
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ],
                           ),
-                          CustomText(
-                            text: tr(productDescription),
-                            color: Colors.grey.shade700,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w300,
-                          ),
-                          CustomText(
-                            text: tr(productPrice),
-                            color: Colors.grey.shade700,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w700,
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              
+                          CustomButton(
+                            height: 45.h,
+                            title: tr('buyNow'),
+                            textColor: Colors.white,
+                            onPressed: () async {
+                              await launchUrl(Uri.parse(productLink));
                             },
-                            child: CustomButton(
-                              title: tr('buyNow'),
-                              textColor: Colors.white,
-                              onPressed: () {
-                                
-                              },
-                            ),
                           )
                         ],
                       ),

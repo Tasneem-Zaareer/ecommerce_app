@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/image_path.dart';
 
-class ForYouWidget extends StatelessWidget {
-  const ForYouWidget({super.key});
+class ForYouProductsList extends StatelessWidget {
+  const ForYouProductsList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +51,9 @@ class ForYouWidget extends StatelessWidget {
             ),
           ),
         ),
+    
+    
+    
       ),
     );
   }
