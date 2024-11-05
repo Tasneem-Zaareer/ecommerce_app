@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
-import 'package:ecommerce_app/features/products/views/product_view.dart';
+import 'package:ecommerce_app/features/products/views/product_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,7 +26,7 @@ class ForYouProductsList extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const ProductView(
+                builder: (context) => const ProductDetailsView(
                   productImage: '',
                   productName: 'productName',
                   productDescription: 'productDescription',
@@ -51,9 +51,6 @@ class ForYouProductsList extends StatelessWidget {
             ),
           ),
         ),
-    
-    
-    
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/features/products/views/product_view.dart';
+import 'package:ecommerce_app/features/products/views/product_details_view.dart';
 import 'package:ecommerce_app/features/search/views/widgets/search_result_item.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class SearchResultsList extends StatelessWidget {
   moveToProductPage(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const ProductView(
+        builder: (context) => const ProductDetailsView(
           productImage: '',
           productName: 'productName',
           productDescription: 'productDescription',

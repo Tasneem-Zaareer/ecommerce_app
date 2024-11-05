@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
-import 'package:ecommerce_app/features/products/views/product_view.dart';
+import 'package:ecommerce_app/features/products/views/product_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/general/custom_container.dart';
@@ -27,7 +27,7 @@ class CustomCategoryList extends StatelessWidget {
                 onTap: () => {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const ProductView(
+                      builder: (context) => const ProductDetailsView(
                         productImage: '',
                         productName: 'productName',
                         productDescription: 'productDescription',

@@ -4,7 +4,7 @@ import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../categories/view/category_view.dart';
+import '../../../categories/view/all_category_products_view.dart';
 import '../../view_model/category_model.dart';
 
 class HomeCategoriesList extends StatelessWidget {
@@ -94,8 +94,9 @@ class HomeCategoriesList extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => CategoryViewProducts(
+                    builder: (context) => AllCategoryViewProducts(
                       categoryTitle: tr(categoriesList[index].categoryName),
+                      productsList: categoriesList[index].imagePath,
                     ),
                   ),
                 );

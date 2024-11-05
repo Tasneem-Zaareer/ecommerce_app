@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ProductView extends StatelessWidget {
+class ProductDetailsView extends StatelessWidget {
   final String productImage;
   final String productName;
   final String productDescription;
   final String productPrice;
   final String productLink;
-  const ProductView({
+  const ProductDetailsView({
     super.key,
     required this.productImage,
     required this.productName,
