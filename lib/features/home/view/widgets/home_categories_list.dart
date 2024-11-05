@@ -53,7 +53,7 @@ class HomeCategoriesList extends StatelessWidget {
                 ),
                 SizedBox(height: 5.h),
                 CustomText(
-                  text: tr('${categoriesList[index]}'),
+                  text: tr(categoriesList[index]),
                   fontSize: 12.sp,
                 )
               ],

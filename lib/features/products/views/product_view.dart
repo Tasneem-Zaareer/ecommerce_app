@@ -6,7 +6,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductView extends StatelessWidget {
-  const ProductView({super.key});
+  final String productImage;
+  final String productName;
+  final String productDescription;
+  final String productPrice;
+  final String productLink;
+  const ProductView({
+    super.key,
+    required this.productImage,
+    required this.productName,
+    required this.productDescription,
+    required this.productPrice,
+    required this.productLink,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +33,7 @@ class ProductView extends StatelessWidget {
           children: [
             CustomContainer(
               height: MediaQuery.of(context).size.height * 0.45,
-              child: Center(child: CustomText(text: 'I M G')),
+              child: const Center(child: CustomText(text: 'I M G')),
             ),
             Expanded(
               child: CustomContainer(
@@ -43,27 +55,34 @@ class ProductView extends StatelessWidget {
                           Row(
                             children: [
                               CustomText(
-                                text: 'Product Name',
+                                text: tr(productName),
                                 color: Colors.black,
                               ),
                             ],
                           ),
                           CustomText(
-                            text: 'sub title product',
+                            text: tr(productDescription),
                             color: Colors.grey.shade700,
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w300,
                           ),
                           CustomText(
-                            text: '140.00 \$',
+                            text: tr(productPrice),
                             color: Colors.grey.shade700,
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w700,
                           ),
-                          CustomButton(
-                            title: tr('buyNow'),
-                            textColor: Colors.white,
-                            onPressed: () {},
+                          GestureDetector(
+                            onTap: () {
+                              
+                            },
+                            child: CustomButton(
+                              title: tr('buyNow'),
+                              textColor: Colors.white,
+                              onPressed: () {
+                                
+                              },
+                            ),
                           )
                         ],
                       ),

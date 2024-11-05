@@ -1,12 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
-import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/for_you_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
-import 'package:ecommerce_app/features/home/view/widgets/search_bar_widget.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,7 +28,7 @@ class HomeView extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => AllCategoriesView(),
+                    builder: (context) => const AllCategoriesView(),
                   ),
                 );
               },
@@ -40,9 +37,9 @@ class HomeView extends StatelessWidget {
             TitleSection(title: tr('forYou')),
             const ForYouWidget(),
             TitleSection(title: tr('mostPopular'), subtitle: tr('seeAll')),
-            CustomCategoryList(),
+            const CustomCategoryList(categoryName: 'Most Popular'),
             TitleSection(title: tr('trendy'), subtitle: tr('seeAll')),
-            CustomCategoryList(),
+            const CustomCategoryList(categoryName: 'Trendy'),
           ],
         ),
       ),

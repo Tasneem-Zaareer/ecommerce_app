@@ -14,7 +14,7 @@ class Logo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomText(
+          const CustomText(
             text: 'L O G O',
             color: Colors.grey,
           ),
@@ -22,7 +22,7 @@ class Logo extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => SearchView(),
+                  builder: (context) => const SearchView(),
                 ),
               );
             },

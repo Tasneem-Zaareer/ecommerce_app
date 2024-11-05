@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:ecommerce_app/core/constants/dimentions.dart';
-import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
-import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/features/home/view/widgets/search_bar_widget.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
 import 'package:ecommerce_app/features/search/views/widgets/search_header_widget.dart';

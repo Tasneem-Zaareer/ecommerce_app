@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/widgets/general/custom_container.dart';
+import 'package:ecommerce_app/features/products/views/product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,17 +22,32 @@ class ForYouWidget extends StatelessWidget {
           crossAxisSpacing: 10.w,
           mainAxisSpacing: 10.h,
         ),
-        itemBuilder: (context, index) => CustomContainer(
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
-            borderRadius: BorderRadius.circular(10.r),
-          ),
-          height: 100.h,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10.r),
-            child: Image.asset(
-              AppImages.categoryTestImage3,
-              fit: BoxFit.cover,
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const ProductView(
+                  productImage: '',
+                  productName: 'productName',
+                  productDescription: 'productDescription',
+                  productPrice: '15\$',
+                  productLink: 'https://amzn.to/4fBCFix',
+                ),
+              ),
+            );
+          },
+          child: CustomContainer(
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(10.r),
+            ),
+            height: 100.h,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.r),
+              child: Image.asset(
+                AppImages.categoryTestImage3,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),

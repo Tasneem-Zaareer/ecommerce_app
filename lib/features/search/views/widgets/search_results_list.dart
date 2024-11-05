@@ -8,7 +8,13 @@ class SearchResultsList extends StatelessWidget {
   moveToProductPage(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => ProductView(),
+        builder: (context) => const ProductView(
+          productImage: '',
+          productName: 'productName',
+          productDescription: 'productDescription',
+          productPrice: '15\$',
+          productLink: 'https://amzn.to/4fBCFix',
+        ),
       ),
     );
   }
