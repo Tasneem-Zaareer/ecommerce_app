@@ -27,7 +27,7 @@ class HomeView extends StatelessWidget {
             // const SearchBarWidget(),
             TitleSection(
               title: tr('shopByCategory'),
-              subtitle: tr('seeAll'),
+              // subtitle: tr('seeAll'),
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

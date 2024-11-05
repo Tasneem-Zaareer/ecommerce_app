@@ -13,7 +13,6 @@ class HomeCategoriesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //!!!! temporary list of categories
-
     final List<CategoryModel> categoriesList = [
       CategoryModel(
         categoryName: tr('men'),

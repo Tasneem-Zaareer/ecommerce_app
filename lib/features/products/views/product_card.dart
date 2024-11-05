@@ -1,4 +1,5 @@
-import 'package:ecommerce_app/core/constants/image_path.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:ecommerce_app/core/widgets/buttons/custom_button.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,12 +39,27 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomText(text: 'text'),
-                const CustomText(text: '200\$'),
+                CustomText(
+                  text: '200\$',
+                  fontWeight: FontWeight.w700,
+                  color: Colors.redAccent.shade700,
+                ),
+                SizedBox(height: 8.h),
+                CustomButton(
+                  background: Colors.orange,
+                  height: 30.h,
+                  borderRadius: 25.r,
+                  title: tr('buyNow'),
+                  textColor: Colors.white,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w600,
+                  onPressed: () {},
+                )
               ],
             ),
           ),

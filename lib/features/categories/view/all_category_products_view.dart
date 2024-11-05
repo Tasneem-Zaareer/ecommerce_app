@@ -59,7 +59,7 @@ class AllCategoryViewProducts extends StatelessWidget {
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                   childAspectRatio: 1,
-                  mainAxisExtent: 200.h,
+                  mainAxisExtent: 240.h,
                   crossAxisCount: 2,
                 ),
                 itemBuilder: (context, index) => ProductCard(
