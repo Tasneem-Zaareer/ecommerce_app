@@ -83,6 +83,83 @@ class HomeView extends StatelessWidget {
         productLink: 'https://amzn.to/4fBCFix',
       ),
     ];
+
+    List<ProductModel> mostPopularProductsList = [
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryWatchesImage,
+        productPrice: '30\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryBeautyImage,
+        productPrice: '1130\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryMenImage,
+        productPrice: '300\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryBagImage,
+        productPrice: '1130\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryKidsImage,
+        productPrice: '300\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+    ];
+
+    List<ProductModel> trendyProductsList = [
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryLuggageImage,
+        productPrice: '30\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryBagImage,
+        productPrice: '1130\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryKidsImage,
+        productPrice: '300\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryBeautyImage,
+        productPrice: '1130\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productImage: AppImages.categoryMenImage,
+        productPrice: '300\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+    ];
+
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -103,7 +180,7 @@ class HomeView extends StatelessWidget {
             ),
             const HomeCategoriesList(),
             TitleSection(title: tr('forYou')),
-             ForYouProductsList(
+            ForYouProductsList(
               forYouproductsListItems: ForYouproductsList,
             ),
             TitleSection(
@@ -120,7 +197,10 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
-            const CustomCategoryList(categoryName: 'Most Popular'),
+            CustomCategoryList(
+              categoryName: 'Most Popular',
+              productsList: mostPopularProductsList,
+            ),
             TitleSection(
               title: tr('trendy'),
               subtitle: tr('seeAll'),
@@ -135,7 +215,10 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
-            const CustomCategoryList(categoryName: 'Trendy'),
+            CustomCategoryList(
+              categoryName: 'Trendy',
+              productsList: trendyProductsList,
+            ),
           ],
         ),
       ),

@@ -3,12 +3,16 @@ import 'package:ecommerce_app/core/widgets/buttons/custom_button.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/widgets/general/custom_container.dart';
 
 class ProductCard extends StatelessWidget {
   final String productImage;
+  final String productLink;
+
   final double? productImageHeight;
+  final double? productImageWidth;
   final double? productNameFontSize;
   final double? productPriceFontSize;
   final double? buyNowButtonHeight;
@@ -17,11 +21,13 @@ class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
     required this.productImage,
+    required this.productLink,
     this.productImageHeight,
     this.productNameFontSize,
     this.productPriceFontSize,
     this.buyNowButtonHeight,
     this.buyNowButtonFontSize,
+    this.productImageWidth,
   });
 
   @override
@@ -46,6 +52,7 @@ class ProductCard extends StatelessWidget {
               productImage,
               fit: BoxFit.cover,
               height: productImageHeight ?? 140.h,
+              width: productImageWidth,
             ),
           ),
           Padding(
@@ -72,7 +79,11 @@ class ProductCard extends StatelessWidget {
                   textColor: Colors.white,
                   fontSize: buyNowButtonFontSize ?? 12.sp,
                   fontWeight: FontWeight.w600,
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launchUrl(
+                      Uri.parse(productLink),
+                    );
+                  },
                 )
               ],
             ),

@@ -48,6 +48,7 @@ class ForYouProductsList extends StatelessWidget {
               productPriceFontSize: 12.sp,
               buyNowButtonHeight: 20.h,
               buyNowButtonFontSize: 9.sp,
+              productLink: forYouproductsListItems[index].productLink,
             )),
       ),
     );
