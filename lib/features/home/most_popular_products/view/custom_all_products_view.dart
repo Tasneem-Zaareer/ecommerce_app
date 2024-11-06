@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/image_path.dart';
+import '../../../../core/constants/image_path.dart';
 
 class AllProductsView extends StatelessWidget {
   final String title;

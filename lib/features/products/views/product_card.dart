@@ -8,10 +8,20 @@ import '../../../core/widgets/general/custom_container.dart';
 
 class ProductCard extends StatelessWidget {
   final String productImage;
+  final double? productImageHeight;
+  final double? productNameFontSize;
+  final double? productPriceFontSize;
+  final double? buyNowButtonHeight;
+  final double? buyNowButtonFontSize;
 
   const ProductCard({
     super.key,
     required this.productImage,
+    this.productImageHeight,
+    this.productNameFontSize,
+    this.productPriceFontSize,
+    this.buyNowButtonHeight,
+    this.buyNowButtonFontSize,
   });
 
   @override
@@ -35,28 +45,32 @@ class ProductCard extends StatelessWidget {
             child: Image.asset(
               productImage,
               fit: BoxFit.cover,
-              height: 140.h,
+              height: productImageHeight ?? 140.h,
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CustomText(text: 'text'),
+                CustomText(
+                  text: 'text',
+                  fontSize: productNameFontSize ?? 14.sp,
+                ),
                 CustomText(
                   text: '200\$',
+                  fontSize: productPriceFontSize ?? 16.sp,
                   fontWeight: FontWeight.w700,
                   color: Colors.redAccent.shade700,
                 ),
-                SizedBox(height: 8.h),
+                SizedBox(height: 5.h),
                 CustomButton(
                   background: Colors.orange,
-                  height: 30.h,
+                  height: buyNowButtonHeight ?? 30.h,
                   borderRadius: 25.r,
                   title: tr('buyNow'),
                   textColor: Colors.white,
-                  fontSize: 12.sp,
+                  fontSize: buyNowButtonFontSize ?? 12.sp,
                   fontWeight: FontWeight.w600,
                   onPressed: () {},
                 )

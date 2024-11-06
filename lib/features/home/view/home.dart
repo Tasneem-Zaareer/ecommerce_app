@@ -2,12 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
-import 'package:ecommerce_app/features/home/view/widgets/for_you_widget.dart';
+import 'package:ecommerce_app/features/home/for_you_products/for_you_products_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
-import 'package:ecommerce_app/features/home/view_model/category_model.dart';
-import 'package:ecommerce_app/features/most_popular_products/view/custom_all_products_view.dart';
+import 'package:ecommerce_app/features/home/most_popular_products/view/custom_all_products_view.dart';
+import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,6 +18,71 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<ProductModel> ForYouproductsList = [
+      ProductModel(
+        productImage: AppImages.categoryShoesImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryWomenImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryHeelsImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryKidsImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryKidsImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryJewelleryImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryMenImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryWatchesImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+      ProductModel(
+        productImage: AppImages.categoryLuggageImage,
+        productName: 'productName',
+        productDescription: 'productDescription',
+        productPrice: '15\$',
+        productLink: 'https://amzn.to/4fBCFix',
+      ),
+    ];
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -38,7 +103,9 @@ class HomeView extends StatelessWidget {
             ),
             const HomeCategoriesList(),
             TitleSection(title: tr('forYou')),
-            const ForYouProductsList(),
+             ForYouProductsList(
+              forYouproductsListItems: ForYouproductsList,
+            ),
             TitleSection(
               title: tr('mostPopular'),
               subtitle: tr('seeAll'),
