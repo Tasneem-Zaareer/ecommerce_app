@@ -22,8 +22,8 @@ class ForYouProductsList extends StatelessWidget {
         itemCount: forYouproductsListItems.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // Number of columns (2 in this case)
-          childAspectRatio: 3 / 1.8, // Aspect ratio of each item
-          crossAxisSpacing: 40.h.w,
+          childAspectRatio: 3 / 1.7, // Aspect ratio of each item
+          crossAxisSpacing: 40.h,
           mainAxisSpacing: 10.w,
         ),
         itemBuilder: (context, index) => GestureDetector(
@@ -44,6 +44,7 @@ class ForYouProductsList extends StatelessWidget {
             child: ProductCard(
               productImage: forYouproductsListItems[index].productImage,
               productImageHeight: 100.h,
+              productImageWidth: 100.h,
               productNameFontSize: 10.sp,
               productPriceFontSize: 12.sp,
               buyNowButtonHeight: 20.h,
