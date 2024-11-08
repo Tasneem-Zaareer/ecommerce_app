@@ -4,7 +4,6 @@ import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../../core/widgets/general/custom_container.dart';
 
 class ProductCard extends StatelessWidget {

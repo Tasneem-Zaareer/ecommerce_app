@@ -243,7 +243,7 @@ class TitleSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10.h),
+        margin: EdgeInsets.symmetric(vertical: 2.h),
         child: TitleWidget(
           title: title,
           subtitle: subtitle,

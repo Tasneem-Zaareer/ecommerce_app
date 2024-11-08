@@ -15,64 +15,36 @@ class HomeCategoriesList extends StatelessWidget {
     //!!!! temporary list of categories
     final List<CategoryModel> categoriesList = [
       CategoryModel(
-        categoryName: tr('men'),
+        categoryName: tr('Mom'),
+        imagePath: AppImages.categoryWatchesImage,
+      ),
+      CategoryModel(
+        categoryName: tr('Dad'),
         imagePath: AppImages.categoryMenImage,
       ),
       CategoryModel(
-        categoryName: tr('women'),
+        categoryName: tr('Couples'),
+        imagePath: AppImages.categoryBagImage,
+      ),
+      CategoryModel(
+        categoryName: tr('Women'),
         imagePath: AppImages.categoryWomenImage,
       ),
       CategoryModel(
-        categoryName: tr('bags'),
-        imagePath: AppImages.categoryBagImage,
-      ),
-      CategoryModel(
-        categoryName: tr('watches'),
-        imagePath: AppImages.categoryWatchesImage,
-      ),
-      CategoryModel(
-        categoryName: tr('heels'),
-        imagePath: AppImages.categoryHeelsImage,
-      ),
-      CategoryModel(
-        categoryName: tr('kids'),
+        categoryName: tr('Kids'),
         imagePath: AppImages.categoryKidsImage,
       ),
       CategoryModel(
-        categoryName: tr('shoes'),
-        imagePath: AppImages.categoryShoesImage,
+        categoryName: tr('Cards'),
+        imagePath: AppImages.categoryTestImage2,
       ),
       CategoryModel(
-        categoryName: tr('beauty'),
-        imagePath: AppImages.categoryBeautyImage,
-      ),
-      CategoryModel(
-        categoryName: tr('luggages'),
-        imagePath: AppImages.categoryLuggageImage,
-      ),
-      CategoryModel(
-        categoryName: tr('jewellery'),
-        imagePath: AppImages.categoryJewelleryImage,
-      ),
-      CategoryModel(
-        categoryName: tr('bags'),
-        imagePath: AppImages.categoryBagImage,
-      ),
-      CategoryModel(
-        categoryName: tr('watches'),
+        categoryName: tr('Wife'),
         imagePath: AppImages.categoryWatchesImage,
       ),
       CategoryModel(
-        categoryName: tr('heels'),
-        imagePath: AppImages.categoryHeelsImage,
-      ),
-      CategoryModel(
-        categoryName: tr('kids'),
-        imagePath: AppImages.categoryKidsImage,
-      ),
-      CategoryModel(
-        categoryName: tr('shoes'),
-        imagePath: AppImages.categoryShoesImage,
+        categoryName: tr('Husband'),
+        imagePath: AppImages.categoryMenImage,
       ),
     ];
 
@@ -84,10 +56,10 @@ class HomeCategoriesList extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: categoriesList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, // Number of columns (2 in this case)
-              childAspectRatio: 1, // Aspect ratio of each item
-              crossAxisSpacing: 5.w,
-              mainAxisSpacing: 5.h,
+              crossAxisCount: 2, // Number of columns (2 in this case)
+              childAspectRatio: 1 / 0.75, // Aspect ratio of each item
+              // crossAxisSpacing: 5.w,
+              // mainAxisSpacing: 5.h,
             ),
             itemBuilder: (context, index) => GestureDetector(
               onTap: () {
@@ -103,15 +75,15 @@ class HomeCategoriesList extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    height: 40.h,
-                    width: 40.h,
+                    // height: 90.h,
+                    // width: 90.h,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(50.r),
                         child: Image.asset(
                           categoriesList[index].imagePath,
                           fit: BoxFit.cover,
-                          width: 30.w,
-                          height: 30.w,
+                          width: 60.w,
+                          height: 60.w,
                         )),
                   ),
                   SizedBox(height: 5.h),
