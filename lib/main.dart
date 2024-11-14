@@ -1,12 +1,19 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/features/home/view/home.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization
       .ensureInitialized(); // Ensure localization is initialized
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     //localization initialize
     EasyLocalization(
@@ -39,9 +46,9 @@ class MyApp extends StatelessWidget {
           supportedLocales: context.supportedLocales,
           locale: context.locale,
           // theme: lightMode,
-          // // darkTheme: darkMode,
-          // // themeMode: themeMode,
-          // // theme: lightMode,
+          // darkTheme: darkMode,
+          // themeMode: themeMode,
+          // theme: lightMode,
 
           home: const HomeView(),
           // home: SearchView(),
