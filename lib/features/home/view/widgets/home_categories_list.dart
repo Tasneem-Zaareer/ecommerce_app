@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
+import 'package:ecommerce_app/features/categories/lists/categories_list.dart';
+import 'package:ecommerce_app/features/categories/lists/mom_list.dart';
+import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,41 +15,7 @@ class HomeCategoriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //!!!! temporary list of categories
-    final List<CategoryModel> categoriesList = [
-      CategoryModel(
-        categoryName: tr('Mom'),
-        imagePath: AppImages.categoryWatchesImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Dad'),
-        imagePath: AppImages.categoryMenImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Couples'),
-        imagePath: AppImages.categoryBagImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Women'),
-        imagePath: AppImages.categoryWomenImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Kids'),
-        imagePath: AppImages.categoryKidsImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Cards'),
-        imagePath: AppImages.categoryTestImage2,
-      ),
-      CategoryModel(
-        categoryName: tr('Wife'),
-        imagePath: AppImages.categoryWatchesImage,
-      ),
-      CategoryModel(
-        categoryName: tr('Husband'),
-        imagePath: AppImages.categoryMenImage,
-      ),
-    ];
+
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -67,7 +36,7 @@ class HomeCategoriesList extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => AllCategoryViewProducts(
                       categoryTitle: tr(categoriesList[index].categoryName),
-                      productsList: categoriesList[index].imagePath,
+                      productsList: momCategoryProductsList,
                     ),
                   ),
                 );

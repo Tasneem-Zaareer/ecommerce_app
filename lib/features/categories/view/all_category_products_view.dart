@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
+import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:ecommerce_app/features/products/views/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +8,7 @@ import '../../../core/constants/image_path.dart';
 
 class AllCategoryViewProducts extends StatelessWidget {
   final String categoryTitle;
-  final String productsList; // will change later on !!!!
+  final List<ProductModel> productsList; // will change later on !!!!
 
   const AllCategoryViewProducts({
     super.key,
@@ -27,7 +28,7 @@ class AllCategoryViewProducts extends StatelessWidget {
             Container(
               height: 70.h,
               child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: productsList.length,
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => Padding(
@@ -36,11 +37,17 @@ class AllCategoryViewProducts extends StatelessWidget {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(50.r),
-                              child: Image.asset(
-                                AppImages.categoryBagImage,
+                              child: 
+                              Image.network(
+                                productsList[index].productImage,
                                 width: 50.w,
                                 height: 50.w,
-                              ),
+                              )
+                              // Image.asset(
+                              //   AppImages.categoryBagImage,
+                              //   width: 50.w,
+                              //   height: 50.w,
+                              // ),
                             ),
                             SizedBox(height: 5.h),
                             CustomText(
@@ -54,7 +61,7 @@ class AllCategoryViewProducts extends StatelessWidget {
             Expanded(
               child: GridView.builder(
                 padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
-                itemCount: 20,
+                itemCount: productsList.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
@@ -63,7 +70,7 @@ class AllCategoryViewProducts extends StatelessWidget {
                   crossAxisCount: 2,
                 ),
                 itemBuilder: (context, index) => ProductCard(
-                  productImage: productsList,
+                  productImage: productsList[index].productImage,
                   productLink: '',
                 ),
               ),

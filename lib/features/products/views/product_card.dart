@@ -9,7 +9,6 @@ import '../../../core/widgets/general/custom_container.dart';
 class ProductCard extends StatelessWidget {
   final String productImage;
   final String productLink;
-
   final double? productImageHeight;
   final double? productImageWidth;
   final double? productNameFontSize;
@@ -47,12 +46,18 @@ class ProductCard extends StatelessWidget {
               topLeft: Radius.circular(10.r),
               topRight: Radius.circular(10.r),
             ),
-            child: Image.asset(
+            child: Image.network(
               productImage,
               fit: BoxFit.cover,
               height: productImageHeight ?? 140.h,
               width: productImageWidth,
             ),
+            // Image.asset(
+            //   productImage,
+            //   fit: BoxFit.cover,
+            //   height: productImageHeight ?? 140.h,
+            //   width: productImageWidth,
+            // ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
