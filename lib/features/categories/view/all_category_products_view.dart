@@ -25,39 +25,33 @@ class AllCategoryViewProducts extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              height: 70.h,
-              child: ListView.builder(
-                  itemCount: productsList.length,
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 5.w),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(50.r),
-                              child: 
-                              Image.network(
-                                productsList[index].productImage,
-                                width: 50.w,
-                                height: 50.w,
-                              )
-                              // Image.asset(
-                              //   AppImages.categoryBagImage,
-                              //   width: 50.w,
-                              //   height: 50.w,
-                              // ),
-                            ),
-                            SizedBox(height: 5.h),
-                            CustomText(
-                              text: 'text',
-                              fontSize: 10.sp,
-                            )
-                          ],
-                        ),
-                      )),
-            ),
+            // //Mom products filter list
+            // Container(
+            //   height: 70.h,
+            //   child: ListView.builder(
+            //       itemCount: productsList.length,
+            //       padding: EdgeInsets.symmetric(horizontal: 16.w),
+            //       scrollDirection: Axis.horizontal,
+            //       itemBuilder: (context, index) => Padding(
+            //             padding: EdgeInsets.symmetric(horizontal: 5.w),
+            //             child: Column(
+            //               children: [
+            //                 ClipRRect(
+            //                     borderRadius: BorderRadius.circular(50.r),
+            //                     child: Image.network(
+            //                       productsList[index].productImage,
+            //                       width: 50.w,
+            //                       height: 50.w,
+            //                     )),
+            //                 SizedBox(height: 5.h),
+            //                 CustomText(
+            //                   text: 'text',
+            //                   fontSize: 10.sp,
+            //                 )
+            //               ],
+            //             ),
+            //           )),
+            // ),
             Expanded(
               child: GridView.builder(
                 padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),

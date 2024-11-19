@@ -1,13 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/categories/lists/categories_list.dart';
 import 'package:ecommerce_app/features/categories/lists/mom_list.dart';
-import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../categories/view/all_category_products_view.dart';
-import '../../view_model/category_model.dart';
 
 class HomeCategoriesWidgetList extends StatelessWidget {
   const HomeCategoriesWidgetList({super.key});
@@ -21,7 +18,7 @@ class HomeCategoriesWidgetList extends StatelessWidget {
           child: GridView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categoriesList.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // Number of columns (2 in this case)
               childAspectRatio: 1 / 0.75, // Aspect ratio of each item
               // crossAxisSpacing: 5.w,
