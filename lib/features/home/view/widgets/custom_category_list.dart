@@ -1,12 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:ecommerce_app/features/products/views/product_card.dart';
 import 'package:ecommerce_app/features/products/views/product_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/widgets/general/custom_container.dart';
 
 class CustomCategoryList extends StatelessWidget {
   final String categoryName;
@@ -21,7 +19,7 @@ class CustomCategoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Container(
+      child: SizedBox(
         height: 250.h,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,

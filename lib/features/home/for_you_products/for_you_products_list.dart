@@ -14,7 +14,7 @@ class ForYouProductsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 390.h,
       child: GridView.builder(
         scrollDirection: Axis.horizontal,
