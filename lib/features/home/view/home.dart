@@ -9,7 +9,7 @@ import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../for_you_products/for_you_products_list.dart';
-import 'widgets/home_categories_list.dart';
+import 'widgets/home_categories_widget_list.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -18,68 +18,13 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ProductModel> ForYouproductsList = [
       ProductModel(
-        productImage: "https://m.media-amazon.com/images/I/51NvQf4TndL._AC_SX679_.jpg",
+        productImage:
+            "https://m.media-amazon.com/images/I/51NvQf4TndL._AC_SX679_.jpg",
         productName: 'productName',
         productDescription: 'productDescription',
         productPrice: '15\$',
         productLink: 'https://amzn.to/4fBCFix',
       ),
-      // ProductModel(
-      //   productImage: AppImages.categoryWomenImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryHeelsImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryKidsImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryKidsImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryJewelleryImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryMenImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryWatchesImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
-      // ProductModel(
-      //   productImage: AppImages.categoryLuggageImage,
-      //   productName: 'productName',
-      //   productDescription: 'productDescription',
-      //   productPrice: '15\$',
-      //   productLink: 'https://amzn.to/4fBCFix',
-      // ),
     ];
 
     List<ProductModel> mostPopularProductsList = [
@@ -176,7 +121,7 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
-            const HomeCategoriesList(),
+            const HomeCategoriesWidgetList(),
             TitleSection(title: tr('forYou')),
             ForYouProductsList(
               forYouproductsListItems: ForYouproductsList,

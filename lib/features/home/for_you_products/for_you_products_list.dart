@@ -43,13 +43,14 @@ class ForYouProductsList extends StatelessWidget {
             },
             child: ProductCard(
               productImage: forYouproductsListItems[index].productImage,
+              productName: '',
               productImageHeight: 100.h,
               productImageWidth: 100.h,
               productNameFontSize: 10.sp,
               productPriceFontSize: 12.sp,
               buyNowButtonHeight: 20.h,
               buyNowButtonFontSize: 9.sp,
-              productLink: forYouproductsListItems[index].productLink,
+              productLink: forYouproductsListItems[index].productLink, 
             )),
       ),
     );

@@ -71,7 +71,8 @@ class AllCategoryViewProducts extends StatelessWidget {
                 ),
                 itemBuilder: (context, index) => ProductCard(
                   productImage: productsList[index].productImage,
-                  productLink: '',
+                  productName: productsList[index].productName,
+                  productLink: productsList[index].productLink,
                 ),
               ),
             ),

@@ -8,6 +8,7 @@ import '../../../core/widgets/general/custom_container.dart';
 
 class ProductCard extends StatelessWidget {
   final String productImage;
+  final String productName;
   final String productLink;
   final double? productImageHeight;
   final double? productImageWidth;
@@ -19,6 +20,7 @@ class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
     required this.productImage,
+    required this.productName,
     required this.productLink,
     this.productImageHeight,
     this.productNameFontSize,
@@ -52,12 +54,6 @@ class ProductCard extends StatelessWidget {
               height: productImageHeight ?? 140.h,
               width: productImageWidth,
             ),
-            // Image.asset(
-            //   productImage,
-            //   fit: BoxFit.cover,
-            //   height: productImageHeight ?? 140.h,
-            //   width: productImageWidth,
-            // ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
@@ -65,14 +61,10 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText(
-                  text: 'text',
-                  fontSize: productNameFontSize ?? 14.sp,
-                ),
-                CustomText(
-                  text: '200\$',
-                  fontSize: productPriceFontSize ?? 16.sp,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.redAccent.shade700,
+                  text: productName,
+                  fontSize: productNameFontSize ?? 12.sp,
+                  maxLines: 3,
+                  textOverflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 5.h),
                 CustomButton(

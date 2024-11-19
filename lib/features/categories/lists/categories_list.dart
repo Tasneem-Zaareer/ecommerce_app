@@ -27,16 +27,6 @@ final List<CategoryModel> categoriesList = [
     categoryProductsList: [],
   ),
   CategoryModel(
-    categoryName: tr('Kids'),
-    imagePath: AppImages.categoryKidsImage,
-    categoryProductsList: [],
-  ),
-  CategoryModel(
-    categoryName: tr('Cards'),
-    imagePath: AppImages.categoryTestImage2,
-    categoryProductsList: [],
-  ),
-  CategoryModel(
     categoryName: tr('Wife'),
     imagePath: AppImages.categoryWatchesImage,
     categoryProductsList: [],
@@ -44,6 +34,16 @@ final List<CategoryModel> categoriesList = [
   CategoryModel(
     categoryName: tr('Husband'),
     imagePath: AppImages.categoryMenImage,
+    categoryProductsList: [],
+  ),
+  CategoryModel(
+    categoryName: tr('Kids'),
+    imagePath: AppImages.categoryKidsImage,
+    categoryProductsList: [],
+  ),
+  CategoryModel(
+    categoryName: tr('Cards'),
+    imagePath: AppImages.categoryTestImage2,
     categoryProductsList: [],
   ),
 ];

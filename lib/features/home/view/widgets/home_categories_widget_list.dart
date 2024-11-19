@@ -6,17 +6,14 @@ import 'package:ecommerce_app/features/categories/lists/mom_list.dart';
 import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../categories/view/all_category_products_view.dart';
 import '../../view_model/category_model.dart';
 
-class HomeCategoriesList extends StatelessWidget {
-  const HomeCategoriesList({super.key});
+class HomeCategoriesWidgetList extends StatelessWidget {
+  const HomeCategoriesWidgetList({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Container(

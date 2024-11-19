@@ -45,11 +45,12 @@ class CustomCategoryList extends StatelessWidget {
                     width: 110.h,
                     child: ProductCard(
                       productImage: productsList[index].productImage,
+                      productName: '',
                       productLink: productsList[index].productLink,
                       productImageHeight: 100.h,
                       productImageWidth: 110.h,
                       productPriceFontSize: 12.sp,
-                      buyNowButtonFontSize: 10.sp,
+                      buyNowButtonFontSize: 10.sp, 
                     ),
                   )),
               SizedBox(height: 5.h),
