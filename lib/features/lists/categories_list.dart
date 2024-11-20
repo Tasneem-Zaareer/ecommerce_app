@@ -1,9 +1,14 @@
 //!!!! temporary list of categories
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/features/categories/lists/mom_list.dart';
-
-import '../../../core/constants/image_path.dart';
-import '../../home/view_model/category_model.dart';
+import 'package:ecommerce_app/features/lists/couples_list.dart';
+import 'package:ecommerce_app/features/lists/dad_list.dart';
+import 'package:ecommerce_app/features/lists/husband_list.dart';
+import 'package:ecommerce_app/features/lists/mom_list.dart';
+import 'package:ecommerce_app/features/lists/wife_list.dart';
+import 'package:ecommerce_app/features/lists/women_list.dart';
+import '../../core/constants/image_path.dart';
+import '../home/view_model/category_model.dart';
+import 'cards_list.dart';
 
 final List<CategoryModel> categoriesList = [
   CategoryModel(
@@ -14,27 +19,27 @@ final List<CategoryModel> categoriesList = [
   CategoryModel(
     categoryName: tr('Dad'),
     imagePath: AppImages.categoryMenImage,
-    categoryProductsList: [],
+    categoryProductsList: dadCategoryProductsList,
   ),
   CategoryModel(
     categoryName: tr('Couples'),
     imagePath: AppImages.categoryBagImage,
-    categoryProductsList: [],
+    categoryProductsList: couplesCategoryProductsList,
   ),
   CategoryModel(
     categoryName: tr('Women'),
     imagePath: AppImages.categoryWomenImage,
-    categoryProductsList: [],
+    categoryProductsList: womenCategoryProductsList,
   ),
   CategoryModel(
     categoryName: tr('Wife'),
     imagePath: AppImages.categoryWatchesImage,
-    categoryProductsList: [],
+    categoryProductsList: wifeCategoryProductsList,
   ),
   CategoryModel(
     categoryName: tr('Husband'),
     imagePath: AppImages.categoryMenImage,
-    categoryProductsList: [],
+    categoryProductsList: husbandCategoryProductsList,
   ),
   CategoryModel(
     categoryName: tr('Kids'),
@@ -44,6 +49,6 @@ final List<CategoryModel> categoriesList = [
   CategoryModel(
     categoryName: tr('Cards'),
     imagePath: AppImages.categoryTestImage2,
-    categoryProductsList: [],
+    categoryProductsList: cardsCategoryProductsList,
   ),
 ];

@@ -1,4 +1,4 @@
-import '../../products/view_model/product_model.dart';
+import '../products/view_model/product_model.dart';
 
 List<String> momCategoryProductsImages = [
   "https://m.media-amazon.com/images/I/51NvQf4TndL._AC_SX679_.jpg",

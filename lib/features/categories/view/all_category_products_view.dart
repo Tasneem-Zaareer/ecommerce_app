@@ -4,7 +4,6 @@ import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:ecommerce_app/features/products/views/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/constants/image_path.dart';
 
 class AllCategoryViewProducts extends StatelessWidget {
   final String categoryTitle;

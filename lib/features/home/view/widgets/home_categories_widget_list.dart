@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
-import 'package:ecommerce_app/features/categories/lists/categories_list.dart';
-import 'package:ecommerce_app/features/categories/lists/mom_list.dart';
+import 'package:ecommerce_app/features/lists/categories_list.dart';
+import 'package:ecommerce_app/features/lists/mom_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../categories/view/all_category_products_view.dart';
@@ -30,7 +30,7 @@ class HomeCategoriesWidgetList extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => AllCategoryViewProducts(
                       categoryTitle: tr(categoriesList[index].categoryName),
-                      productsList: momCategoryProductsList,
+                      productsList: categoriesList[index].categoryProductsList,
                     ),
                   ),
                 );

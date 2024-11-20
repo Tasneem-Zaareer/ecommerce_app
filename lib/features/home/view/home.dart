@@ -1,11 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/constants/image_path.dart';
 import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
 import 'package:ecommerce_app/features/home/most_popular_products/view/custom_all_products_view.dart';
-import 'package:ecommerce_app/features/products/view_model/product_model.dart';
+import 'package:ecommerce_app/features/lists/for_you_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../for_you_products/for_you_products_list.dart';
@@ -16,152 +15,18 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ProductModel> ForYouproductsList = [
-      ProductModel(
-        productImage:
-            "https://m.media-amazon.com/images/I/51NvQf4TndL._AC_SX679_.jpg",
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productPrice: '15\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-    ];
-
-    List<ProductModel> mostPopularProductsList = [
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryWatchesImage,
-        productPrice: '30\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryBeautyImage,
-        productPrice: '1130\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryMenImage,
-        productPrice: '300\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryBagImage,
-        productPrice: '1130\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryKidsImage,
-        productPrice: '300\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-    ];
-
-    List<ProductModel> trendyProductsList = [
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryLuggageImage,
-        productPrice: '30\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryBagImage,
-        productPrice: '1130\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryKidsImage,
-        productPrice: '300\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryBeautyImage,
-        productPrice: '1130\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-      ProductModel(
-        productName: 'productName',
-        productDescription: 'productDescription',
-        productImage: AppImages.categoryMenImage,
-        productPrice: '300\$',
-        productLink: 'https://amzn.to/4fBCFix',
-      ),
-    ];
-
     return Scaffold(
       body: SafeArea(
         child: ListView(
           children: [
             const Logo(),
             const HomeHeaderWidget(),
-            // const SearchBarWidget(),
-            TitleSection(
-              title: tr('shopByCategory'),
-              // subtitle: tr('seeAll'),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const AllCategoriesView(),
-                  ),
-                );
-              },
-            ),
+            TitleSection(title: tr('shopByCategory')),
             const HomeCategoriesWidgetList(),
-            TitleSection(title: tr('forYou')),
-            ForYouProductsList(
-              forYouproductsListItems: ForYouproductsList,
-            ),
-            TitleSection(
-              title: tr('mostPopular'),
-              subtitle: tr('seeAll'),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const AllProductsView(
-                      title: 'Most Popular Products',
-                      productsList: [],
-                    ),
-                  ),
-                );
-              },
-            ),
-            // CustomCategoryList(
-            //   categoryName: 'Most Popular',
-            //   productsList: mostPopularProductsList,
-            // ),
-            TitleSection(
-              title: tr('trendy'),
-              subtitle: tr('seeAll'),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const AllProductsView(
-                      title: 'Trendy Products',
-                      productsList: [],
-                    ),
-                  ),
-                );
-              },
-            ),
-            // CustomCategoryList(
-            //   categoryName: 'Trendy',
-            //   productsList: trendyProductsList,
-            // ),
+            // TitleSection(title: tr('forYou')),
+            // ForYouProductsList(forYouproductsListItems: ForYouproductsList),
+            // TitleSection(title: tr('mostPopular')),
+            // TitleSection(title: tr('trendy')),
           ],
         ),
       ),
