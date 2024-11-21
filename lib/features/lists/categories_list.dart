@@ -17,11 +17,11 @@ final List<CategoryModel> categoriesList = [
     imagePath: AppImages.categoryWatchesImage,
     categoryProductsList: momCategoryProductsList,
   ),
-  CategoryModel(
-    categoryName: tr('Dad'),
-    imagePath: AppImages.categoryMenImage,
-    categoryProductsList: dadCategoryProductsList,
-  ),
+  // CategoryModel(
+  //   categoryName: tr('Dad'),
+  //   imagePath: AppImages.categoryMenImage,
+  //   categoryProductsList: dadCategoryProductsList,
+  // ),
   CategoryModel(
     categoryName: tr('Couples'),
     imagePath: AppImages.categoryBagImage,
@@ -32,11 +32,11 @@ final List<CategoryModel> categoriesList = [
     imagePath: AppImages.categoryWomenImage,
     categoryProductsList: womenCategoryProductsList,
   ),
-  CategoryModel(
-    categoryName: tr('Wife'),
-    imagePath: AppImages.categoryWatchesImage,
-    categoryProductsList: wifeCategoryProductsList,
-  ),
+  // CategoryModel(
+  //   categoryName: tr('Wife'),
+  //   imagePath: AppImages.categoryWatchesImage,
+  //   categoryProductsList: wifeCategoryProductsList,
+  // ),
   CategoryModel(
     categoryName: tr('Husband'),
     imagePath: AppImages.categoryMenImage,

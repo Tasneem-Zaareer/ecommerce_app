@@ -24,7 +24,7 @@ class AllCategoryViewProducts extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // //Mom products filter list
+            // //category products filter list
             // Container(
             //   height: 70.h,
             //   child: ListView.builder(
