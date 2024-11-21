@@ -34,6 +34,9 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomContainer(
       decoration: BoxDecoration(
+        border: Border.all(
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+        ),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10.r),
           topRight: Radius.circular(10.r),
@@ -43,16 +46,21 @@ class ProductCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10.r),
-              topRight: Radius.circular(10.r),
-            ),
-            child: Image.network(
-              productImage,
-              fit: BoxFit.cover,
-              height: productImageHeight ?? 140.h,
-              width: productImageWidth,
+          Container(
+            color: Colors.white,
+            child: Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10.r),
+                  topRight: Radius.circular(10.r),
+                ),
+                child: Image.network(
+                  productImage,
+                  fit: BoxFit.cover,
+                  height: productImageHeight ?? 140.h,
+                  width: productImageWidth,
+                ),
+              ),
             ),
           ),
           Padding(
