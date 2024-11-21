@@ -38,7 +38,7 @@ final List<CategoryModel> categoriesList = [
   //   categoryProductsList: wifeCategoryProductsList,
   // ),
   CategoryModel(
-    categoryName: tr('Husband'),
+    categoryName: tr('Men'),
     imagePath: AppImages.categoryMenImage,
     categoryProductsList: husbandCategoryProductsList,
   ),

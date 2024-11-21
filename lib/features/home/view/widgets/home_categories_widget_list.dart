@@ -18,9 +18,9 @@ class HomeCategoriesWidgetList extends StatelessWidget {
           child: GridView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categoriesList.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, // Number of columns (2 in this case)
-              childAspectRatio: 1 / 0.75, // Aspect ratio of each item
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1 / 0.9, // Aspect ratio of each item
               // crossAxisSpacing: 5.w,
               // mainAxisSpacing: 5.h,
             ),
@@ -38,15 +38,13 @@ class HomeCategoriesWidgetList extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    // height: 90.h,
-                    // width: 90.h,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(50.r),
                         child: Image.asset(
                           categoriesList[index].imagePath,
                           fit: BoxFit.cover,
-                          width: 60.w,
-                          height: 60.w,
+                          width: 75.w,
+                          height: 75.w,
                         )),
                   ),
                   SizedBox(height: 5.h),
