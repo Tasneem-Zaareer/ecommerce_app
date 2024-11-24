@@ -15,14 +15,14 @@ class ForYouProductsListGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 390.h,
+      height: 360.h,
       child: GridView.builder(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         itemCount: forYouProductsListItems.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // Number of columns (2 in this case)
-          childAspectRatio: 3 / 1.7, // Aspect ratio of each item
+          childAspectRatio: 3 / 2, // Aspect ratio of each item
           crossAxisSpacing: 40.h,
           mainAxisSpacing: 10.w,
         ),
@@ -31,7 +31,7 @@ class ForYouProductsListGridView extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => ProductDetailsView(
-                    productImage: '',
+                    productImage: forYouProductsListItems[index].productImage,
                     productName: forYouProductsListItems[index].productName,
                     productDescription:
                         forYouProductsListItems[index].productDescription,
@@ -43,14 +43,15 @@ class ForYouProductsListGridView extends StatelessWidget {
             },
             child: ProductCard(
               productImage: forYouProductsListItems[index].productImage,
-              productName: '',
+              productName: forYouProductsListItems[index].productName,
+              productLink: forYouProductsListItems[index].productLink,
               productImageHeight: 100.h,
               productImageWidth: 100.h,
               productNameFontSize: 10.sp,
               productPriceFontSize: 12.sp,
-              buyNowButtonHeight: 20.h,
+              buyNowButtonHeight: 25.h,
               buyNowButtonFontSize: 9.sp,
-              productLink: forYouProductsListItems[index].productLink,
+              horizontalPadding: 10.w,
             )),
       ),
     );

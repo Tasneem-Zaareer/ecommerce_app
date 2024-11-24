@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../general/custom_text.dart';
 
 class CustomButton extends StatelessWidget {

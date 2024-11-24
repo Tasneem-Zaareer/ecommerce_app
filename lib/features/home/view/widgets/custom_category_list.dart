@@ -20,7 +20,7 @@ class CustomCategoryList extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: SizedBox(
-        height: 250.h,
+        height: 200.h,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => Column(
@@ -41,23 +41,18 @@ class CustomCategoryList extends StatelessWidget {
                         ),
                       },
                   child: Container(
-                    height: 200.h,
+                    height: 170.h,
                     width: 110.h,
                     child: ProductCard(
                       productImage: productsList[index].productImage,
-                      productName: '',
+                      productName: productsList[index].productName,
                       productLink: productsList[index].productLink,
                       productImageHeight: 100.h,
                       productImageWidth: 110.h,
                       productPriceFontSize: 12.sp,
-                      buyNowButtonFontSize: 10.sp, 
+                      buyNowButtonFontSize: 10.sp,
                     ),
                   )),
-              SizedBox(height: 5.h),
-              CustomText(
-                text: tr('kids'),
-                fontSize: 12.sp,
-              )
             ],
           ),
           separatorBuilder: (context, index) => SizedBox(width: 10.w),

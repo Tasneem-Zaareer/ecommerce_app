@@ -16,6 +16,7 @@ class ProductCard extends StatelessWidget {
   final double? productPriceFontSize;
   final double? buyNowButtonHeight;
   final double? buyNowButtonFontSize;
+  final double? horizontalPadding;
 
   const ProductCard({
     super.key,
@@ -28,6 +29,7 @@ class ProductCard extends StatelessWidget {
     this.buyNowButtonHeight,
     this.buyNowButtonFontSize,
     this.productImageWidth,
+    this.horizontalPadding,
   });
 
   @override
@@ -64,14 +66,14 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
+            padding: EdgeInsets.symmetric(horizontal: horizontalPadding ?? 16.w, vertical: 5.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText(
                   text: productName,
                   fontSize: productNameFontSize ?? 12.sp,
-                  maxLines: 3,
+                  maxLines: 1,
                   textOverflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 5.h),

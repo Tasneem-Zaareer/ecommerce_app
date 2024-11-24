@@ -32,9 +32,14 @@ class ProductDetailsView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomContainer(
-              height: MediaQuery.of(context).size.height * 0.45,
-              child: const Center(child: CustomText(text: 'I M G')),
+            Center(
+              child: CustomContainer(
+                height: MediaQuery.of(context).size.height * 0.45,
+                child: Image.network(
+                  productImage,
+                  height: MediaQuery.of(context).size.height * 0.45,
+                ),
+              ),
             ),
             Expanded(
               child: CustomContainer(
@@ -45,48 +50,26 @@ class ProductDetailsView extends StatelessWidget {
                     topRight: Radius.circular(20.r),
                   ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(10.h),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              CustomText(
-                                text: tr(productName),
-                                color: Colors.black,
-                              ),
-                              CustomText(
-                                text: tr(productDescription),
-                                color: Colors.grey.shade700,
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w300,
-                              ),
-                              CustomText(
-                                text: tr(productPrice),
-                                color: Colors.grey.shade700,
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ],
-                          ),
-                          CustomButton(
-                            height: 45.h,
-                            title: tr('buyNow'),
-                            textColor: Colors.white,
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(productLink));
-                            },
-                          )
-                        ],
+                child: Padding(
+                  padding: EdgeInsets.all(10.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomText(
+                        text: tr(productName),
+                        color: Colors.black,
                       ),
-                    ),
-                  ],
+                      CustomButton(
+                        height: 45.h,
+                        title: tr('buyNow'),
+                        textColor: Colors.white,
+                        onPressed: () async {
+                          await launchUrl(Uri.parse(productLink));
+                        },
+                      )
+                    ],
+                  ),
                 ),
               ),
             )
