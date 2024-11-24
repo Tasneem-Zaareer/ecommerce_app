@@ -56,9 +56,24 @@ class ProductDetailsView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomText(
-                        text: tr(productName),
-                        color: Colors.black,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomText(
+                            text: tr(productName),
+                            color: Colors.black,
+                          ),
+                          CustomText(
+                            text: tr(
+                                'youCanEasilyGetThisProductByClickingOnBuyNowButtonAndYouCanSeeThePriceAndAllDetailsYouNeedBeforeYouBuyIt'),
+                            // color: Theme.of(context)
+                            //     .colorScheme
+                            //     .secondary
+                            color: Colors.grey.withOpacity(0.7),
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ],
                       ),
                       CustomButton(
                         height: 45.h,
