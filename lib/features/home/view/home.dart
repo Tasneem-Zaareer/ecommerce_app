@@ -1,10 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
+import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
-import 'package:ecommerce_app/features/home/most_popular_products/view/custom_all_products_view.dart';
+import 'package:ecommerce_app/features/home/custom_list_all_products_view/view/custom_all_products_view.dart';
 import 'package:ecommerce_app/features/lists/for_you_list.dart';
+import 'package:ecommerce_app/features/lists/most_popular_products_list.dart';
+import 'package:ecommerce_app/features/lists/trendy_products_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../for_you_products/for_you_products_list.dart';
@@ -23,10 +26,19 @@ class HomeView extends StatelessWidget {
             const HomeHeaderWidget(),
             TitleSection(title: tr('shopByCategory')),
             const HomeCategoriesWidgetList(),
-            // TitleSection(title: tr('forYou')),
-            // ForYouProductsList(forYouproductsListItems: ForYouproductsList),
-            // TitleSection(title: tr('mostPopular')),
-            // TitleSection(title: tr('trendy')),
+            TitleSection(title: tr('forYou')),
+            ForYouProductsListGridView(
+                forYouProductsListItems: forYouProductsList),
+            TitleSection(title: tr('mostPopular')),
+            CustomCategoryList(
+              categoryName: 'mostPopular',
+              productsList: mostPopularProductsList,
+            ),
+            TitleSection(title: tr('trendy')),
+            CustomCategoryList(
+              categoryName: 'trendy',
+              productsList: trendyProductsList,
+            ),
           ],
         ),
       ),

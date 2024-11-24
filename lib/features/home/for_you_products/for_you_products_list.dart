@@ -4,12 +4,12 @@ import 'package:ecommerce_app/features/products/views/product_details_view.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ForYouProductsList extends StatelessWidget {
+class ForYouProductsListGridView extends StatelessWidget {
   //should be a list of products
-  final List<ProductModel> forYouproductsListItems;
-  const ForYouProductsList({
+  final List<ProductModel> forYouProductsListItems;
+  const ForYouProductsListGridView({
     super.key,
-    required this.forYouproductsListItems,
+    required this.forYouProductsListItems,
   });
 
   @override
@@ -19,7 +19,7 @@ class ForYouProductsList extends StatelessWidget {
       child: GridView.builder(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.symmetric(horizontal: 16.w),
-        itemCount: forYouproductsListItems.length,
+        itemCount: forYouProductsListItems.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // Number of columns (2 in this case)
           childAspectRatio: 3 / 1.7, // Aspect ratio of each item
@@ -32,17 +32,17 @@ class ForYouProductsList extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => ProductDetailsView(
                     productImage: '',
-                    productName: forYouproductsListItems[index].productName,
+                    productName: forYouProductsListItems[index].productName,
                     productDescription:
-                        forYouproductsListItems[index].productDescription,
-                    productPrice: forYouproductsListItems[index].productPrice,
-                    productLink: forYouproductsListItems[index].productLink,
+                        forYouProductsListItems[index].productDescription,
+                    productPrice: forYouProductsListItems[index].productPrice,
+                    productLink: forYouProductsListItems[index].productLink,
                   ),
                 ),
               );
             },
             child: ProductCard(
-              productImage: forYouproductsListItems[index].productImage,
+              productImage: forYouProductsListItems[index].productImage,
               productName: '',
               productImageHeight: 100.h,
               productImageWidth: 100.h,
@@ -50,7 +50,7 @@ class ForYouProductsList extends StatelessWidget {
               productPriceFontSize: 12.sp,
               buyNowButtonHeight: 20.h,
               buyNowButtonFontSize: 9.sp,
-              productLink: forYouproductsListItems[index].productLink, 
+              productLink: forYouProductsListItems[index].productLink,
             )),
       ),
     );

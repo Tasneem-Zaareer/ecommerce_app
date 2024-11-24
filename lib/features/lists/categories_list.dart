@@ -2,7 +2,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/features/lists/couples_list.dart';
 import 'package:ecommerce_app/features/lists/dad_list.dart';
-import 'package:ecommerce_app/features/lists/husband_list.dart';
+import 'package:ecommerce_app/features/lists/men_list.dart';
 import 'package:ecommerce_app/features/lists/kids_list.dart';
 import 'package:ecommerce_app/features/lists/mom_list.dart';
 import 'package:ecommerce_app/features/lists/wife_list.dart';

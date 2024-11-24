@@ -1,40 +1,54 @@
+import 'package:ecommerce_app/features/lists/cards_list.dart';
+import 'package:ecommerce_app/features/lists/couples_list.dart';
+import 'package:ecommerce_app/features/lists/kids_list.dart';
+import 'package:ecommerce_app/features/lists/men_list.dart';
+import 'package:ecommerce_app/features/lists/mom_list.dart';
+import 'package:ecommerce_app/features/lists/women_list.dart';
+
 import '../../core/constants/image_path.dart';
 import '../products/view_model/product_model.dart';
 
 List<ProductModel> mostPopularProductsList = [
   ProductModel(
-    productName: 'productName',
+    productImage: cardsCategoryProductsImages[1],
+    productName: cardsCategoryProductsNames[1],
     productDescription: 'productDescription',
-    productImage: AppImages.categoryWatchesImage,
-    productPrice: '30\$',
-    productLink: 'https://amzn.to/4fBCFix',
+    productPrice: '15\$',
+    productLink: cardsCategoryProductsLinks[1],
   ),
   ProductModel(
-    productName: 'productName',
+    productImage: couplesCategoryProductsImages[1],
+    productName: couplesCategoryProductsNames[1],
     productDescription: 'productDescription',
-    productImage: AppImages.categoryBeautyImage,
-    productPrice: '1130\$',
-    productLink: 'https://amzn.to/4fBCFix',
+    productPrice: '15\$',
+    productLink: couplesCategoryProductsLinks[1],
   ),
   ProductModel(
-    productName: 'productName',
+    productImage: momCategoryProductsImages[1],
+    productName: momCategoryProductsNames[1],
     productDescription: 'productDescription',
-    productImage: AppImages.categoryMenImage,
-    productPrice: '300\$',
-    productLink: 'https://amzn.to/4fBCFix',
+    productPrice: '15\$',
+    productLink: momCategoryProductsLinks[1],
   ),
   ProductModel(
-    productName: 'productName',
+    productImage: womenCategoryProductsImages[1],
+    productName: womenCategoryProductsNames[1],
     productDescription: 'productDescription',
-    productImage: AppImages.categoryBagImage,
-    productPrice: '1130\$',
-    productLink: 'https://amzn.to/4fBCFix',
+    productPrice: '15\$',
+    productLink: womenCategoryProductsLinks[1],
   ),
   ProductModel(
-    productName: 'productName',
+    productImage: menCategoryProductsImages[1],
+    productName: menCategoryProductsNames[1],
     productDescription: 'productDescription',
-    productImage: AppImages.categoryKidsImage,
-    productPrice: '300\$',
-    productLink: 'https://amzn.to/4fBCFix',
+    productPrice: '15\$',
+    productLink: menCategoryProductsLinks[1],
+  ),
+  ProductModel(
+    productImage: kidsCategoryProductsImages[1],
+    productName: kidsCategoryProductsNames[1],
+    productDescription: 'productDescription',
+    productPrice: '15\$',
+    productLink: kidsCategoryProductsLinks[1],
   ),
 ];
