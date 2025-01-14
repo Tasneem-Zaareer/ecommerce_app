@@ -14,9 +14,20 @@ class Logo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const CustomText(
-            text: 'L O G O',
-            color: Colors.grey,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              CustomText(
+                text: 'YallaGo',
+                color: Colors.grey,
+              ),
+              SizedBox(width: 2),
+              CustomText(
+                text: 'STORE',
+                color: Colors.grey,
+                fontSize: 8,
+              ),
+            ],
           ),
           GestureDetector(
             onTap: () {
