@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/general/custom_text.dart';
+import '../../../declaration/declaration_viw.dart';
 
 class Logo extends StatelessWidget {
   const Logo({super.key});
@@ -29,15 +30,26 @@ class Logo extends StatelessWidget {
               ),
             ],
           ),
+          // GestureDetector(
+          //   onTap: () {
+          //     Navigator.of(context).push(
+          //       MaterialPageRoute(
+          //         builder: (context) => const SearchView(),
+          //       ),
+          //     );
+          //   },
+          //   child: Icon(Icons.search, color: Colors.grey, size: 24.sp),
+          // )
+
           GestureDetector(
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const SearchView(),
+                  builder: (context) => const DeclarationView(),
                 ),
               );
             },
-            child: Icon(Icons.search, color: Colors.grey, size: 24.sp),
+            child: Icon(Icons.info, color: Colors.grey, size: 24.sp),
           )
         ],
       ),
