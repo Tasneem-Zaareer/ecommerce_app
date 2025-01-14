@@ -36,7 +36,7 @@ class AllCategoriesView extends StatelessWidget {
       body: SafeArea(
         child: Row(
           children: [
-            Container(
+            SizedBox(
                 width: 110.w,
                 child: ListView.builder(
                   padding:

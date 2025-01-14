@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/lists/categories_list.dart';
-import 'package:ecommerce_app/features/lists/mom_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../categories/view/all_category_products_view.dart';
@@ -13,14 +12,15 @@ class HomeCategoriesWidgetList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Container(
+      child: SizedBox(
           height: 200.h,
           child: GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemCount: categoriesList.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 1 / 0.9, // Aspect ratio of each item
+              childAspectRatio: 3 / 2.9, // Aspect ratio of each item
               // crossAxisSpacing: 5.w,
               // mainAxisSpacing: 5.h,
             ),
@@ -37,16 +37,14 @@ class HomeCategoriesWidgetList extends StatelessWidget {
               },
               child: Column(
                 children: [
-                  Container(
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50.r),
-                        child: Image.asset(
-                          categoriesList[index].imagePath,
-                          fit: BoxFit.cover,
-                          width: 75.w,
-                          height: 75.w,
-                        )),
-                  ),
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(50.r),
+                      child: Image.asset(
+                        categoriesList[index].imagePath,
+                        fit: BoxFit.cover,
+                        width: 75.w,
+                        height: 75.w,
+                      )),
                   SizedBox(height: 5.h),
                   CustomText(
                     text: tr(categoriesList[index].categoryName),

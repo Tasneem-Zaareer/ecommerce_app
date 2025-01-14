@@ -1,10 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/features/categories/view/all_categories_view.dart';
 import 'package:ecommerce_app/features/home/view/widgets/custom_category_list.dart';
 import 'package:ecommerce_app/features/home/view/widgets/header_widget.dart';
 import 'package:ecommerce_app/features/home/view/widgets/logo.dart';
 import 'package:ecommerce_app/core/widgets/text/title_widget.dart';
-import 'package:ecommerce_app/features/home/custom_list_all_products_view/view/custom_all_products_view.dart';
 import 'package:ecommerce_app/features/lists/for_you_list.dart';
 import 'package:ecommerce_app/features/lists/most_popular_products_list.dart';
 import 'package:ecommerce_app/features/lists/trendy_products_list.dart';

@@ -4,8 +4,6 @@ import 'package:ecommerce_app/features/lists/kids_list.dart';
 import 'package:ecommerce_app/features/lists/men_list.dart';
 import 'package:ecommerce_app/features/lists/mom_list.dart';
 import 'package:ecommerce_app/features/lists/women_list.dart';
-
-import '../../core/constants/image_path.dart';
 import '../products/view_model/product_model.dart';
 
 List<ProductModel> mostPopularProductsList = [

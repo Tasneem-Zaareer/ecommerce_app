@@ -5,10 +5,10 @@ class AnimationColorWidget extends StatefulWidget {
   final EdgeInsetsGeometry? padding;
 
   const AnimationColorWidget({
-    Key? key,
+    super.key,
     this.child,
     this.padding,
-  }) : super(key: key);
+  });
 
   @override
   AnimationColorWidgetState createState() => AnimationColorWidgetState();

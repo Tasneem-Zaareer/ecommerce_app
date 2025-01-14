@@ -6,11 +6,11 @@ class CustomOnTap extends StatelessWidget {
   final double borderRadius;
 
   const CustomOnTap({
-    Key? key,
+    super.key,
     required this.onTap,
     required this.child,
     this.borderRadius = 10,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

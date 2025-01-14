@@ -1,5 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce_app/core/widgets/general/custom_text.dart';
 import 'package:ecommerce_app/features/products/view_model/product_model.dart';
 import 'package:ecommerce_app/features/products/views/product_card.dart';
 import 'package:ecommerce_app/features/products/views/product_details_view.dart';
@@ -40,7 +38,7 @@ class CustomCategoryList extends StatelessWidget {
                           ),
                         ),
                       },
-                  child: Container(
+                  child: SizedBox(
                     height: 170.h,
                     width: 110.h,
                     child: ProductCard(
