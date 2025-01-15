@@ -10,6 +10,7 @@ class ProductCard extends StatelessWidget {
   final String productImage;
   final String productName;
   final String productLink;
+  // final Function onTap;
   final double? productImageHeight;
   final double? productImageWidth;
   final double? productNameFontSize;
@@ -23,6 +24,7 @@ class ProductCard extends StatelessWidget {
     required this.productImage,
     required this.productName,
     required this.productLink,
+    // required this.onTap,
     this.productImageHeight,
     this.productNameFontSize,
     this.productPriceFontSize,

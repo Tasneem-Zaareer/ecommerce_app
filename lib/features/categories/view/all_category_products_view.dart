@@ -5,6 +5,8 @@ import 'package:ecommerce_app/features/products/views/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../products/views/product_details_view.dart';
+
 class AllCategoryViewProducts extends StatelessWidget {
   final String categoryTitle;
   final List<ProductModel> productsList; // will change later on !!!!
@@ -62,10 +64,26 @@ class AllCategoryViewProducts extends StatelessWidget {
                   mainAxisExtent: 240.h,
                   crossAxisCount: 2,
                 ),
-                itemBuilder: (context, index) => ProductCard(
-                  productImage: productsList[index].productImage,
-                  productName: productsList[index].productName,
-                  productLink: productsList[index].productLink,
+                itemBuilder: (context, index) => GestureDetector(
+                         onTap: () => {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ProductDetailsView(
+                              productImage: productsList[index].productImage,
+                              productName: productsList[index].productName,
+                              productDescription:
+                                  productsList[index].productDescription,
+                              productPrice: productsList[index].productPrice,
+                              productLink: productsList[index].productLink,
+                            ),
+                          ),
+                        ),
+                      },
+                  child: ProductCard(
+                    productImage: productsList[index].productImage,
+                    productName: productsList[index].productName,
+                    productLink: productsList[index].productLink,
+                  ),
                 ),
               ),
             ),

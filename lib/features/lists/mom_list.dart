@@ -48,9 +48,9 @@ List<String> momCategoryProductsImages = [
 ];
 
 List<String> momCategoryProductsNames = [
-  "Amazon Echo Show 5 (Newest Model), Smart Display"
-      "Shonyin Dainty Heart-felt Infinity Heart Necklace",
-  "KitchenAid Artisan Stand Mixer",
+  "Amazon Echo Show 5 (Newest Model), Smart Display",
+  "Shonyin Dainty Heart-felt Infinity Heart Necklace",
+  // "KitchenAid Artisan Stand Mixer",
   "Mom, I Want to Hear Your Story: A Mother’s Guided Journal",
   "Crock-Pot 20-Ounce Electric Lunch Box",
   "Tabletop Fire Pit with Smores Maker Kit",

@@ -19,7 +19,7 @@ class Logo extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               CustomText(
-                text: 'YallaGo',
+                text: 'Gifts4All',
                 color: Colors.grey,
               ),
               SizedBox(width: 2),
